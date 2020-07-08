@@ -2,7 +2,7 @@ import random as rnd
 import sqlite3
 import getpass as gpass
 
-VAULT_PASS = "GrandioseGoPro"
+VAULT_PASS = "TEST" #change it before using
 
 word = gpass.getpass()
 

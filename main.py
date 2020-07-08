@@ -12,7 +12,7 @@ while word != VAULT_PASS:
     word = input("What is your password?\n")
     
 
-conn = sqlite3.connect('example.db')
+conn = sqlite3.connect('NotVault.db')
 c = conn.cursor()
 
 if word == VAULT_PASS:   

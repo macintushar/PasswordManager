@@ -27,12 +27,19 @@ if word == VAULT_PASS:
         print( "q: Quit" )
         print("**************************")
 
+        try:
+            c.execute("CREATE TABLE IF NOT EXISTS pass (Website TEXT, Password TEXT)")
+            conn.commit()
+            print("Your Vault has been created!")
+        except:
+            print("You already have a Vault!")
+            continue
+
         opt=input( "Enter the option:" )
         print()
 
+        
         if opt == "g":
-            c.execute("CREATE TABLE IF NOT EXISTS pass (Website TEXT, Password TEXT)")
-            conn.commit()
             website = input("Enter the Website's name \n")
             website = website.capitalize()
             password_length = 15
